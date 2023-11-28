@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Interfaz Hospitalaria</title>
+</head>
+<body>
+    <header>
+        <h1>Hospital ELIMMSSS</h1>
+        <nav>
+            <ul>
+                <li id="patients-tab">Pacientes</li>
+                <li id="doctors-tab">Médicos</li>
+                <li id="rooms-tab">Cuartos</li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="login-button">Iniciar Sesión</button>
+                <button id="register-button">Registrarse</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="announcement">
+            <h2>Anuncios</h2>
+            <p>Bienvenido al Hospital ELIMMMSSS. Ofrecemos atención médica de alta calidad y servicios personalizados.</p>
+            <p>¡TE QUEREMOS BIENNN!</p>
+        </div>
+
+        <div class="section" id="patients-section">
+            <h2>Pacientes</h2>
+            <ul id="patient-list">
+                <!-- Lista de pacientes -->
+                <li>Paciente 1</li>
+                <li>Paciente 2</li>
+                <!-- Agrega más pacientes según sea necesario -->
+            </ul>
+            <div id="patient-details">
+                <h3>Detalles del Paciente</h3>
+                <p><strong>Nombre:</strong> <span id="patient-name"></span></p>
+                <p><strong>Apellido:</strong> <span id="patient-lastname"></span></p>
+                <p><strong>Fecha de Nacimiento:</strong> <span id="patient-birthdate"></span></p>
+                <p><strong>Género:</strong> <span id="patient-gender"></span></p>
+                <p><strong>Médico Asignado:</strong> <span id="patient-doctor"></span></p>
+                <p><strong>Habitación Asignada:</strong> <span id="patient-room"></span></p>
+            </div>
+            <div id="patient-actions">
+                <button id="admit-patient">Dar de Alta</button>
+                <button id="discharge-patient">Dar de Baja</button>
+            </div>
+        </div>
+
+        <div class="section" id="doctors-section">
+            <h2>Médicos</h2>
+            <ul id="doctor-list">
+                <!-- Lista de médicos -->
+                <li>Dr. Pérez</li>
+                <li>Dra. González</li>
+                <!-- Agrega más médicos según sea necesario -->
+            </ul>
+        </div>
+
+        <div class="section" id="rooms-section">
+            <h2>Cuartos</h2>
+            <ul id="room-list">
+                <!-- Lista de cuartos -->
+                <li>Cuarto 101</li>
+                <li>Cuarto 102</li>
+                <!-- Agrega más cuartos según sea necesario -->
+            </ul>
+        </div>
+
+        <div class="overlay" id="login-overlay">
+            <div class="form-container">
+                <h2>Iniciar Sesión</h2>
+                <form id="login-form">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="ssn">Número de Seguro Social:</label>
+                    <input type="text" id="ssn" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" required>
+
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+                <button id="close-login-overlay">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="overlay" id="register-overlay">
+            <div class="form-container">
+                <h2>Registrarse</h2>
+                <!-- Formulario de registro -->
+                <form id="register-form">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+
+                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+                    <label for="genero">Género:</label>
+                    <select id="genero" name="genero" required>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+                    <label for="medico">Médico Asignado:</label>
+                    <select id="medico" name="medico" required>
+                        <option value="1">Dr. Pérez</option>
+                        <option value="2">Dra. González</option>
+                    </select>
+
+                    <label for="habitacion">Habitación Asignada:</label>
+                    <select id="habitacion" name="habitacion" required>
+                        <option value="101">101</option>
+                        <option value="102">102</option>
+                    </select>
+
+                    <button type="submit">Registrar Paciente</button>
+                </form>
+                <!-- Fin del formulario de registro -->
+                <button id="close-register-overlay">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
